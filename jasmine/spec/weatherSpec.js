@@ -1,26 +1,30 @@
 describe("Weather", function() {
   var weather;
 
-  beforeEach(function() {
-    weather = new Weather;
-  })
+  describe("#isSunny", function() {
 
-  it ("Responds to sunny?", function() {
-    expect(weather.isSunny).toBeDefined();
-  });
+    beforeEach(function() {
+      weather = new Weather;
+    })
 
-  it ("returns true or false", function() {
-    expect([true, false]).toContain(weather.isSunny());
-  });
+    it ("Responds to sunny?", function() {
+      expect(weather.isSunny).toBeDefined();
+    });
 
-  it ("returns true when 100% chance of being sunny", function() {
-    spyOn(Math, 'random').and.returnValue(0);
-    expect(weather.isSunny()).toEqual(true);
-  });
+    it ("returns true or false", function() {
+      expect([true, false]).toContain(weather.isSunny());
+    });
 
-  it ("returns false when 100% chance of not being sunny", function() {
-    spyOn(Math, 'random').and.returnValue(1);
-    expect(weather.isSunny()).toEqual(false);
+    it ("returns true when 100% chance of being sunny", function() {
+      spyOn(Math, 'random').and.returnValue(0);
+      expect(weather.isSunny()).toEqual(true);
+    });
+
+    it ("returns false when 100% chance of not being sunny", function() {
+      spyOn(Math, 'random').and.returnValue(1);
+      expect(weather.isSunny()).toEqual(false);
+    });
+
   });
 
 });
