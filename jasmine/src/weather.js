@@ -1,5 +1,5 @@
 var Weather = function(){};
 
-Weather.prototype.isSunny = function(){
-return true;
+Weather.prototype.isSunny = function() {
+  return true;
 };
