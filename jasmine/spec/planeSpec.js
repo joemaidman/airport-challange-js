@@ -3,7 +3,7 @@ describe ("Plane", function() {
 
   beforeEach(function() {
     plane = new Plane;
-  })
+  });
 
   it ("has been defined", function() {
     expect(plane).toBeDefined();
